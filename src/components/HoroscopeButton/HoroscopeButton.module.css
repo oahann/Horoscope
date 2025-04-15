@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #8e44ad;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #8e44ad;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: normal;
+  }
+  
+  .buttonActive {
+    background-color: #8e44ad;
+    color: white;
+    font-weight: bold;
+  }
+  

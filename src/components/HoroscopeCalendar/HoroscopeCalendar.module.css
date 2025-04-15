@@ -1,0 +1,53 @@
+.containerHoroscopeCalendar{
+    margin: 40px 80px 80px 80px;
+}
+.scores{
+    margin-bottom: 10px;
+}
+.scores::-webkit-progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+
+}
+.scores::-webkit-progress-value {
+    background-color: #8e44ad; /* <-- колір заповнення */
+    border-radius: 8px;
+}
+.titleDatanSign{
+    font-size: 1.5rem;
+    margin: 20px 0 25px 0;
+}
+.titleGeneral{
+    font-size: 1.2rem;
+    color: #decee3;
+}
+.textHoroscope{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.titleScore{
+    font-size: 1.1rem;
+    color: #decee3;
+}
+.scoreRow {
+    margin-bottom: 10px;
+  }
+  
+  .titleScore {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .iconBest {
+    color: gold;
+    font-size: 1.2em;
+  }
+  
+  .iconWorst {
+    color: crimson;
+    font-size: 1.2em;
+  }
+  
