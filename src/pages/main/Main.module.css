@@ -2,33 +2,33 @@
     padding: 2rem;
   }
   
-  .header {
+.header {
     text-align: center;
   }
   
-  .zodiacSection {
+.zodiacSection {
     display: flex;
     align-items: left;
     justify-content: left;
     gap: 10px;
   }
   
-  .zodiacIcon {
+.zodiacIcon {
     font-size: 6rem;
   }
   
-  .title {
+.title {
     font-size: 0.9rem;
     text-align: center;
   }
  
 .zodiacHeaderFlexBox{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 40px 0 40px;
-} 
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px 0 40px;
+  } 
 .selectZodiacnTitle{
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-} 
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  } 

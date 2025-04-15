@@ -10,7 +10,7 @@
 
 }
 .scores::-webkit-progress-value {
-    background-color: #8e44ad; /* <-- колір заповнення */
+    background-color: #8e44ad; 
     border-radius: 8px;
 }
 .titleDatanSign{
@@ -19,35 +19,40 @@
 }
 .titleGeneral{
     font-size: 1.2rem;
-    color: #decee3;
+    color: #aa80bd; 
+    font-weight: bold; 
 }
 .textHoroscope{
     font-size: 1.1rem;
     margin-bottom: 20px;
+    color: inherit; 
 }
 .titleScore{
     font-size: 1.1rem;
-    color: #decee3;
+    color: #aa80bd; 
+    font-weight: bold; 
 }
 .scoreRow {
     margin-bottom: 10px;
   }
   
-  .titleScore {
+.titleScore {
     display: flex;
     align-items: center;
     gap: 6px;
     font-weight: bold;
     margin-bottom: 4px;
-  }
+}
   
-  .iconBest {
+.iconBest {
     color: gold;
     font-size: 1.2em;
-  }
+}
   
-  .iconWorst {
+.iconWorst {
     color: crimson;
     font-size: 1.2em;
-  }
-  
+}
+.date{
+    font-size: 1.1rem;
+}

@@ -87,7 +87,7 @@ const HoroscopeComponent = ({ selectedSign }) => {
           <div>
             <div className={styles.titleDatanSign}>
               <h3>{selectedSign.label}</h3>
-              <h3>{horoscope.date}</h3>
+              <h3 className={styles.date}>{horoscope.date}</h3>
             </div>
             <p className={styles.textHoroscope}>
               <strong className={styles.titleGeneral}>General:</strong> {horoscope.horoscope_data}
@@ -121,7 +121,11 @@ const HoroscopeComponent = ({ selectedSign }) => {
           </div>
         )}
 
-        {!loading && averageScore > 5 && <CatFact />}
+        {!loading && (
+          averageScore > 5 
+            ? <CatFact />
+            : <p className={styles.lowScoreMessage}>You don't have enough zodiac score to get a fact about cats</p>
+        )}
       </div>
 
       <SocialShareButtons />

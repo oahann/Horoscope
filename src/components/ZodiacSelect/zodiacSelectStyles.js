@@ -5,8 +5,8 @@ export const zodiacSelectStyles = {
     borderRadius: '8px',
     boxShadow: 'none',
     borderColor: '#9c27b0',
-    backgroundColor:'black',
-    width:'200px',
+    backgroundColor: 'var(--background, transparent)',
+    width: '200px',
     '&:hover': {
       borderColor: '#7b1fa2', 
     }
@@ -14,15 +14,16 @@ export const zodiacSelectStyles = {
   option: (base, state) => ({
     ...base,
     borderRadius: '5px',
-    backgroundColor: state.isSelected ? '#9c27b0' : state.isFocused ? '#e1bee7' : null,
-    color: 'white',
+    backgroundColor: state.isSelected ? '#c976e9' : state.isFocused ? '#e1bee7' : 'var(--background, transparent)',
+    color: state.isSelected ? '#333' : state.isFocused ? '#333' : 'var(--foreground, inherit)',
     '&:hover': {
-      backgroundColor: '#ce93d8', 
+      backgroundColor: '#e1bee7',
+      color: '#333', 
     }
   }),
   singleValue: (base) => ({
     ...base,
-    color: 'white', 
+    color: 'var(--foreground, inherit)', 
   }),
   indicatorSeparator: (base) => ({
     ...base,
@@ -39,7 +40,7 @@ export const zodiacSelectStyles = {
     ...base,
     borderRadius: '8px',
     boxShadow: '0 4px 20px rgba(156, 39, 176, 0.15)',
-    backgroundColor: 'black'
+    backgroundColor: 'var(--background, white)'
   }),
   menuList: (base) => ({
     ...base,
