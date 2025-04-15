@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ 🌟 Horoscope Website
+A Next.js application that displays personalized horoscopes based on zodiac signs with daily, weekly, and monthly predictions. The application includes health, relationship, and career scores that are generated based on the chosen zodiac sign and date.
 
-## Getting Started
+ 📋 Features
+- Zodiac Sign Selection: Choose from all 12 zodiac signs with interactive icons
+- Multiple Time Periods: View horoscopes for today, tomorrow, weekly, or monthly
+- Theme Switching: Toggle between light and dark themes
+- Personalized Scores: View generated health, relationship, and career scores
+- Cat Facts: Receive random cat facts when your average zodiac score is high enough
+- Social Sharing: Share your horoscope via various social media platforms
 
-First, run the development server:
+ 🛠️ Technologies Used
+- Next.js: React framework with server-side rendering
+- React: JavaScript library for building user interfaces
+- CSS Modules: For component-scoped styling
+- React Select: For customized dropdown menus
+- React Icons: For zodiac and UI icons
+- Axios: For API requests
+- localStorage: For persisting scores and user preferences
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 🚀 Getting Started
+Prerequisites
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Node.js 14.x or higher
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ Installation
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd horoscope-website
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```bash
+   npm install
+    or
+   yarn install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+   ```bash
+   npm run dev
+    or
+   yarn dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open http://localhost:3000 in your browser to see the application.
 
-## Deploy on Vercel
+ 🔄 API Integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application uses the following APIs:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Horoscope API: `https://horoscope-app-api.vercel.app/api/v1/get-horoscope/`
+  - Endpoints for daily, weekly, and monthly horoscopes
+  - Parameters: sign, day (for daily horoscopes)
+
+- Cat Facts API: `https://catfact.ninja/fact`
+  - Returns random facts about cats
+  - Displayed when the average zodiac score is above 5
+
+ 💾 Local Storage Usage
+
+The application stores the following information in localStorage:
+
+- Theme preference: User's preferred theme (light or dark)
+- Generated scores: Scores for health, relationships, and career are stored with a key format of `${sign}-${date}`
+
+ 🛠️ Implementation Details
+
+ Score Generation
+
+Scores are generated using a pseudo-random algorithm based on the selected zodiac sign and date. This ensures that:
+- Scores are consistent for the same sign and date
+- Values range from 0 to 10
+- Each category (health, relationships, career) has its own unique score
+
+ Theme Switching
+
+The theme system works by:
+1. Toggling CSS classes on the root HTML element
+2. Storing the preference in localStorage
+3. Using CSS variables to apply theme-specific colors throughout the application
