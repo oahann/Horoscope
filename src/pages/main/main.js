@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import ZodiacSelect from '@/components/ZodiacSelect/ZodiacSelect';
+import dynamic from 'next/dynamic';
+const ZodiacSelect = dynamic(() => import('@/components/ZodiacSelect/ZodiacSelect'), { ssr: false });
 import HoroscopeComponent from '@/components/HoroscopeCalendar/HoroscopeCalendar';
 import ThemeSwitcher from '@/components/ThemeSwitcher/ThemeSwitcher';
 import { zodiacOptions } from '@/components/data/zodiacOptions';
