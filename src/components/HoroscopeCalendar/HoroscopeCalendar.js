@@ -49,7 +49,7 @@ const HoroscopeComponent = ({ selectedSign }) => {
         }
       } catch (err) {
         console.error('Error fetching horoscope:', err);
-        setError('Не вдалося завантажити гороскоп');
+        setError('Horoscope failed to load');
       } finally {
         setLoading(false);
       }
@@ -124,7 +124,7 @@ const HoroscopeComponent = ({ selectedSign }) => {
         {!loading && (
           averageScore > 5 
             ? <CatFact />
-            : <p className={styles.lowScoreMessage}>You don't have enough zodiac score to get a fact about cats</p>
+            : <p className={styles.lowScoreMessage}>You Don&apos;t have enough zodiac score to get a fact about cats</p>
         )}
       </div>
 
