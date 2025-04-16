@@ -1,3 +1,4 @@
+https://horoscope-teal.vercel.app/
  🌟 Horoscope Website
 A Next.js application that displays personalized horoscopes based on zodiac signs with daily, weekly, and monthly predictions. The application includes health, relationship, and career scores that are generated based on the chosen zodiac sign and date.
 
